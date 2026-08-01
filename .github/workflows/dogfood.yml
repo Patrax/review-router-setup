@@ -1,0 +1,20 @@
+name: Dogfood production setup
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Create a Review Router setup session
+        uses: ./
+        with:
+          slack-channel: pull-requests
+          preset: repo-watch
+          reviewer-mentions: all

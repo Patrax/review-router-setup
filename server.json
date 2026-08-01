@@ -1,0 +1,17 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.patrax/review-router",
+  "title": "Tenpace Review Router",
+  "description": "Human-approved setup for routing GitHub pull requests into the right Slack channel.",
+  "repository": {
+    "url": "https://github.com/Patrax/review-router-setup",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.tenpace.com/mcp"
+    }
+  ]
+}

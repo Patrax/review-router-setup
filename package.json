@@ -1,0 +1,32 @@
+{
+  "name": "review-router-setup",
+  "version": "1.0.0",
+  "description": "GitHub Action for human-approved Review Router setup.",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build src/index.js -o dist --minify --source-map",
+    "check-dist": "npm run build && git diff --exit-code -- dist",
+    "test": "node --test",
+    "check": "npm test && npm run build"
+  },
+  "keywords": [
+    "github-action",
+    "slack",
+    "pull-requests",
+    "code-review",
+    "ai-agent"
+  ],
+  "author": "Tenpace",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "3.0.1",
+    "yaml": "2.9.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "0.44.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

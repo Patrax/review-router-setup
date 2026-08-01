@@ -1,0 +1,5 @@
+version: 1
+route:
+  slack-channel: pull-requests
+  preset: repo-watch
+  reviewer-mentions: all

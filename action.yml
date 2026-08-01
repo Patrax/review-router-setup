@@ -1,0 +1,37 @@
+name: Set up Review Router
+description: Propose a human-approved GitHub-to-Slack Review Router connection.
+author: Tenpace
+branding:
+  icon: git-pull-request
+  color: green
+inputs:
+  slack-channel:
+    description: Slack channel name, with or without a leading #. Overrides the config file.
+    required: false
+    default: ""
+  slack-workspace:
+    description: Optional Slack workspace name or ID. Overrides the config file.
+    required: false
+    default: ""
+  preset:
+    description: Routing preset — repo-watch, full-coverage, or team-activity.
+    required: false
+    default: ""
+  reviewer-mentions:
+    description: Reviewer mention policy — all, connected-only, or none.
+    required: false
+    default: ""
+  config:
+    description: Path to config as code. Inputs override the file.
+    required: false
+    default: .tenpace/review-router.yml
+outputs:
+  setup-id:
+    description: Public Review Router setup-session ID.
+  setup-url:
+    description: Short-lived browser URL for a human Tenpace team admin.
+  status:
+    description: Initial setup status.
+runs:
+  using: node24
+  main: dist/index.js
