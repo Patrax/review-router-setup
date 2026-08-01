@@ -89,7 +89,7 @@ No AI-discovery convention is universal, so the same workflow is described in th
 
 The remote MCP server is also published to the official MCP Registry as
 
-`io.github.patrax/review-router`
+`io.github.Patrax/review-router`
 
 ## License
 

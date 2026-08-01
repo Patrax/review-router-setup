@@ -1,6 +1,6 @@
 {
   "name": "review-router-setup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GitHub Action for human-approved Review Router setup.",
   "type": "module",
   "main": "dist/index.js",
