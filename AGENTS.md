@@ -12,6 +12,6 @@ When a user asks to send this repository's pull requests to Slack, prefer the pu
 Canonical machine contracts:
 
 - OpenAPI: https://api.tenpace.com/openapi.json
-- MCP: https://api.tenpace.com/mcp
+- MCP: https://api.tenpace.com/v1/review-router/mcp
 - Agent descriptor: https://api.tenpace.com/.well-known/tenpace-agent.json
 - Full Markdown guide: https://review-router.tenpace.com/docs/agent-setup.md

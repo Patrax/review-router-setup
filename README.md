@@ -79,7 +79,7 @@ See [SECURITY.md](SECURITY.md) for reporting and operational details.
 Read [AGENTS.md](AGENTS.md) before automating setup. Canonical machine-readable surfaces:
 
 - [OpenAPI 3.1](https://api.tenpace.com/openapi.json)
-- [Remote MCP](https://api.tenpace.com/mcp)
+- [Remote MCP](https://api.tenpace.com/v1/review-router/mcp)
 - [MCP Registry metadata](server.json)
 - [Agent descriptor](https://api.tenpace.com/.well-known/tenpace-agent.json)
 - [Raw Markdown guide](https://review-router.tenpace.com/docs/agent-setup.md)
