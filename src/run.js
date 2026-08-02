@@ -89,7 +89,7 @@ export async function run({
       Authorization: `Bearer ${oidcToken}`,
       "Content-Type": "application/json",
       "Idempotency-Key": stableRunKey(environment, intent),
-      "User-Agent": "review-router-setup-action/1.0.0",
+      "User-Agent": "review-router-setup-action/1.1.0",
     },
     body: JSON.stringify({ source: "github_action", intent }),
     signal: AbortSignal.timeout(15_000),
@@ -109,11 +109,11 @@ export async function run({
   await actionCore.summary
     .addHeading("Review Router setup")
     .addRaw(
-      `An agent proposed this exact connection:\n\n- Repository: \`${intent.repository}\`\n- Slack channel: \`#${intent.slackChannel}\`\n- Preset: \`${intent.preset}\`\n- Reviewer mentions: \`${intent.reviewerMentions}\`\n\n[Authorize Review Router setup](${setupUrl})\n\nOpen the link with the same GitHub account that started this workflow. A Tenpace team admin must approve this exact intent and complete GitHub and Slack authorization. The Action does not receive provider credentials.\n`
+      `An agent proposed this exact connection:\n\n- Repository: \`${intent.repository}\`\n- Slack channel: \`#${intent.slackChannel}\`\n- Preset: \`${intent.preset}\`\n- Reviewer mentions: \`${intent.reviewerMentions}\`\n\n[Continue Review Router setup](${setupUrl})\n\nOpen the link with the same GitHub account that started this workflow. Signing in as a Tenpace team admin claims and locks this exact plan; there is no separate approval step. Complete GitHub and Slack authorization in the browser. The Action does not receive provider credentials.\n`
     )
     .write();
-  actionCore.notice("Review Router setup is waiting for a human team admin.", {
-    title: "Authorization required",
+  actionCore.notice("Review Router setup is waiting for a team admin to sign in.", {
+    title: "Sign-in required",
   });
   return { payload, intent };
 }

@@ -76,7 +76,7 @@ test("creates an OIDC-bound setup and emits only safe outputs", async () => {
   assert.equal(core.outputs.get("setup-id"), "rrs_example");
   assert.equal(core.outputs.has("agent-token"), false);
   assert.deepEqual(core.secrets, ["github.oidc.token", "rr_setup_secret"]);
-  assert.match(core.summary.text, /Authorize Review Router setup/);
+  assert.match(core.summary.text, /Continue Review Router setup/);
   assert.match(core.summary.text, /same GitHub account/);
   assert.doesNotMatch(core.outputs.get("setup-url"), /#claim=/);
   assert.doesNotMatch(core.summary.text, /rr_setup_secret/);
