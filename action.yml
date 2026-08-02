@@ -29,7 +29,7 @@ outputs:
   setup-id:
     description: Public Review Router setup-session ID.
   setup-url:
-    description: Short-lived browser URL for a human Tenpace team admin.
+    description: Short-lived browser URL for the person completing setup.
   status:
     description: Initial setup status.
 runs:

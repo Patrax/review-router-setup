@@ -4,10 +4,10 @@ When a user asks to send this repository's pull requests to Slack, prefer the pu
 
 1. Add a workflow with `permissions: { contents: read, id-token: write }`.
 2. Use `Patrax/review-router-setup@v1` with a `slack-channel` input, or commit `.tenpace/review-router.yml`.
-3. Run the workflow and have the same GitHub actor open the returned `setup-url` as a Tenpace team admin. The Action URL contains no claim secret and is safe to show in the job summary.
+3. Run the workflow and have the same GitHub actor open the returned `setup-url` and sign in to Tenpace. The Action URL contains no claim secret and is safe to show in the job summary.
 4. Never ask the user to paste GitHub tokens, Slack tokens, OAuth codes, cookies, or a Tenpace session into chat, issues, files, or Action inputs.
 5. Do not treat GitHub Actions OIDC as permission to modify GitHub or Slack. It proves only the workflow repository.
-6. Update the proposal only before the human claims it. After claim, only the authenticated admin can edit the locked plan.
+6. Update the proposal only before the person completing setup claims it. After claim, only that person can edit the locked plan.
 
 Canonical machine contracts:
 

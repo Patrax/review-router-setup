@@ -7,7 +7,7 @@
     "url": "https://github.com/Patrax/review-router-setup",
     "source": "github"
   },
-  "version": "1.1.0",
+  "version": "1.1.1",
   "remotes": [
     {
       "type": "streamable-http",
