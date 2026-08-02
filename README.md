@@ -1,6 +1,6 @@
 # Review Router Setup
 
-[![Test](https://github.com/Patrax/review-router-setup/actions/workflows/test.yml/badge.svg)](https://github.com/Patrax/review-router-setup/actions/workflows/test.yml)
+[![Test](https://github.com/tenpace-app/review-router-setup/actions/workflows/test.yml/badge.svg)](https://github.com/tenpace-app/review-router-setup/actions/workflows/test.yml)
 
 Create a GitHub-to-Slack Review Router connection from a workflow or AI coding session. The Action produces one short-lived browser link. Open it and sign in to Tenpace to claim and lock the exact repository, Slack destination, routing preset, and reviewer mention policy.
 
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: Patrax/review-router-setup@v1
+      - uses: tenpace-app/review-router-setup@v1
         with:
           slack-channel: pull-requests
           preset: repo-watch
@@ -89,7 +89,7 @@ No AI-discovery convention is universal, so the same workflow is described in th
 
 The remote MCP server is also published to the official MCP Registry as
 
-`io.github.Patrax/review-router`
+`io.github.tenpace-app/review-router`
 
 ## License
 
